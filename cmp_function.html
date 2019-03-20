@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+  <head>
+    <title>insert a title</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <script>
+//    定义升序比较器函数  
+      function cmpASC(a,b){return a-b;}  
+      var arr1=[12,24,111,38,1315,47,76,99,85];
+//    将比较器函数传入sort中  
+      arr1.sort(cmpASC); //cmp后不加(),表示把cmpASC这个函数给了arr.sort。如果加()，仅仅是把结果给了arr.sort
+      console.log(String(arr1));
+
+//    定义降序比较器函数  
+      function cmpDESC(a,b){return b-a;} 
+      var arr2=[2,4,1,8,3,7,6,9,5];
+//    将比较器函数传入sort中  
+      arr2.sort(cmpDESC); //cmp后不加(),表示把cmp这个函数给了arr.sort。如果加()，仅仅是把结果给了arr.sort
+      console.log(String(arr2));
+
+//    直接翻转排序好的数组，也可达到降序的目的
+      arr1.reverse();
+      console.log(String(arr1));
+
+    </script>
+  </body>
+</html>
