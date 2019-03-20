@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+  <head>
+    <title>insert a title</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <script>
+      function bubbleSort(arr){
+//      外层循环控制轮数r  
+        for(var r=1;r<arr.length;r++){
+//        内层循环控制遍历每个元素的i
+          for(var i=0;i<arr.length-r;i++){
+//          如果arr中i位置的值>i+1位置的值
+            if(arr[i]>arr[i+1]){
+//            交换arr中i位置和i+1位置的值(只能排序数字类型)
+//              arr[i]^=arr[i+1];
+//              arr[i+1]^=arr[i];
+//              arr[i]^=arr[i+1];
+//              以下的方法适合任意类型  
+                arr[i]=[arr[i+1],arr[i+1]=arr[i]][0];
+//              即:a=[b,b=a][0];  
+            }
+          }
+        }
+      }
+
+      var arr1=[12,24,111,38,1315,47,76,99,85];
+      bubbleSort(arr1);
+      console.log(String(arr1));
+
+      var arr2=["tom","jerry","rose","alice","smith","lin","bob"];
+      bubbleSort(arr2);
+      console.log(String(arr2));
+
+    </script>
+  </body>
+</html>
